@@ -1,0 +1,248 @@
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+
+/* ── Header / Nav ── */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: #0f172a;
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+.logo { display: flex; align-items: center; gap: .6rem; color: #fff; font-size: 1.15rem; font-weight: 700; }
+.logo span { font-size: 1.5rem; }
+nav { display: flex; gap: 1.5rem; }
+nav a { color: #cbd5e1; font-size: .9rem; transition: color .2s; }
+nav a:hover { color: #fff; }
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+  color: #fff;
+  padding: 4rem 2rem 3.5rem;
+  text-align: center;
+}
+.hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: .75rem; }
+.hero p { font-size: 1.05rem; color: #bfdbfe; max-width: 560px; margin: 0 auto 1.5rem; }
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  padding: .3rem 1rem;
+  font-size: .8rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+/* ── Sections ── */
+section { padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; }
+section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: #0f172a; }
+
+/* ── Guide cards ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: box-shadow .2s, transform .2s;
+}
+.card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.1); transform: translateY(-2px); }
+.card.coming-soon { opacity: .55; cursor: default; }
+.card.coming-soon:hover { box-shadow: none; transform: none; }
+.card-icon { font-size: 2rem; margin-bottom: .75rem; }
+.card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; color: #0f172a; }
+.card p { font-size: .875rem; color: #64748b; margin-bottom: 1rem; }
+.card-tag {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .2rem .65rem;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.card-tag.soon { background: #f1f5f9; color: #94a3b8; }
+.card-link {
+  display: inline-flex; align-items: center; gap: .4rem;
+  margin-top: .75rem;
+  font-size: .875rem; font-weight: 600;
+  color: #1d4ed8;
+  transition: gap .2s;
+}
+.card-link:hover { gap: .7rem; }
+
+/* ── Contact section ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.contact-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.contact-icon { font-size: 1.6rem; flex-shrink: 0; }
+.contact-card strong { display: block; font-size: .8rem; color: #64748b; margin-bottom: .15rem; }
+.contact-card span { font-size: .95rem; font-weight: 600; color: #0f172a; }
+
+/* ── Footer ── */
+footer {
+  background: #0f172a; color: #94a3b8;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: .85rem;
+  margin-top: 2rem;
+}
+
+/* ════════════════════════════════
+   GUIDE PAGE STYLES
+   ════════════════════════════════ */
+
+/* Breadcrumb */
+.breadcrumb {
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  padding: .75rem 2rem;
+  font-size: .85rem;
+  color: #64748b;
+}
+.breadcrumb a { color: #1d4ed8; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* Guide header */
+.guide-header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  color: #fff;
+  padding: 2.5rem 2rem 2rem;
+}
+.guide-header .guide-tag {
+  display: inline-block;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  padding: .25rem .9rem;
+  font-size: .75rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: .9rem;
+}
+.guide-header h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: .5rem; }
+.guide-meta { font-size: .85rem; color: #93c5fd; display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: .5rem; }
+
+/* Guide body */
+.guide-body { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+/* Step */
+.step { display: flex; gap: 1.25rem; margin-bottom: 2.5rem; }
+.step-num {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  background: #1d4ed8; color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1rem;
+  margin-top: .1rem;
+}
+.step-content h2 { font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: .6rem; }
+.step-content p { color: #475569; margin-bottom: .6rem; }
+
+/* Screenshot placeholder */
+.screenshot-placeholder {
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: #94a3b8;
+  margin: 1rem 0;
+  font-size: .9rem;
+}
+.screenshot-placeholder .ph-icon { font-size: 2rem; margin-bottom: .4rem; }
+
+/* Field blocks */
+.field-block {
+  background: #f8fafc;
+  border-left: 3px solid #1d4ed8;
+  border-radius: 0 8px 8px 0;
+  padding: .9rem 1.1rem;
+  margin: .75rem 0;
+}
+.field-block strong { display: block; color: #0f172a; margin-bottom: .25rem; }
+.field-block p { color: #475569; font-size: .9rem; margin: 0; }
+
+/* Status table */
+.status-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .9rem; }
+.status-table th { background: #0f172a; color: #fff; padding: .6rem .9rem; text-align: left; }
+.status-table td { padding: .55rem .9rem; border-bottom: 1px solid #e2e8f0; }
+.status-table tr:nth-child(even) td { background: #f8fafc; }
+.status-badge {
+  display: inline-block; padding: .2rem .7rem; border-radius: 999px; font-size: .75rem; font-weight: 600;
+}
+.badge-new { background: #dbeafe; color: #1d4ed8; }
+.badge-progress { background: #fef9c3; color: #854d0e; }
+.badge-pending { background: #fee2e2; color: #991b1b; }
+.badge-solved { background: #dcfce7; color: #166534; }
+
+/* Callout boxes */
+.callout {
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  font-size: .9rem;
+}
+.callout.tip { background: #f0fdf4; border-left: 4px solid #22c55e; color: #166534; }
+.callout.info { background: #eff6ff; border-left: 4px solid #3b82f6; color: #1e40af; }
+.callout.warn { background: #fffbeb; border-left: 4px solid #f59e0b; color: #92400e; }
+
+/* Example block */
+.example-block {
+  background: #1e293b; color: #e2e8f0;
+  border-radius: 8px; padding: 1rem 1.2rem;
+  font-family: monospace; font-size: .9rem;
+  margin: .75rem 0;
+}
+
+/* Next steps box */
+.next-steps {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 2rem;
+}
+.next-steps h3 { color: #1d4ed8; margin-bottom: .6rem; }
+.next-steps ul { padding-left: 1.25rem; color: #1e40af; font-size: .9rem; }
+.next-steps li { margin-bottom: .35rem; }
+
+/* Contact bar */
+.contact-bar {
+  background: #0f172a; color: #cbd5e1;
+  text-align: center;
+  padding: 1.25rem 2rem;
+  font-size: .9rem;
+  margin-top: 2rem;
+}
+.contact-bar a { color: #60a5fa; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.6rem; }
+  .guide-header h1 { font-size: 1.4rem; }
+  .step { flex-direction: column; gap: .6rem; }
+  nav { display: none; }
+}

@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  it-help-centre:
+    build: .
+    container_name: it-help-centre
+    ports:
+      - "8080:80"
+    restart: unless-stopped
