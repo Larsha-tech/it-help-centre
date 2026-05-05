@@ -66,14 +66,16 @@ nav a:hover { background: #f1f5f9; color: #1e293b; }
 .card-link:hover { gap: .6rem; }
 
 /* ── Contact ── */
-.contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: .85rem; }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .85rem; }
 .contact-card {
   background: #fff; border: 1px solid #e8ecf3; border-radius: 12px;
   padding: 1.1rem 1.25rem; display: flex; align-items: center; gap: .9rem;
+  min-width: 0;
 }
 .contact-icon { font-size: 1.4rem; flex-shrink: 0; }
 .contact-card strong { display: block; font-size: .75rem; color: #94a3b8; margin-bottom: .1rem; text-transform: uppercase; letter-spacing: .05em; }
-.contact-card span { font-size: .9rem; font-weight: 600; color: #0f172a; }
+.contact-card span { font-size: .875rem; font-weight: 600; color: #0f172a; word-break: break-all; }
+.contact-card a { font-size: .875rem; font-weight: 600; word-break: break-all; }
 
 /* ── Footer ── */
 footer {
