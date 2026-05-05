@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How to Raise an IT Support Ticket – House of Blue Beans IT Help Centre</title>
   <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/doc.css" />
 </head>
 <body>
 
   <header>
     <div class="logo">
-      <img src="../assets/images/logo.png" alt="IT Help Centre Logo" />
+      <img src="../assets/images/logo.png" alt="House of Blue Beans Logo" />
       <div class="logo-divider"></div>
       <span class="logo-text">House of Blue Beans – IT Help Centre</span>
     </div>
@@ -29,149 +30,98 @@
     How to Raise an IT Support Ticket
   </div>
 
-  <div class="guide-header">
-    <div class="guide-tag">Ticketing System</div>
-    <h1>How to Raise an IT Support Ticket</h1>
-    <div class="guide-meta">
-      <span>🎫 System: GLPI</span>
-      <span>⏱ Takes about 5 minutes</span>
-    </div>
-  </div>
+  <div class="doc-wrap">
+    <div class="doc-body">
 
-  <div class="guide-body">
+      <h1>How to Raise an IT Support Ticket</h1>
 
-    <div class="callout info">
-      <strong>What is a support ticket?</strong> A ticket is how you officially tell IT about a problem or request. It keeps everything on record so nothing gets missed and you can track progress.
-    </div>
+      <h4>Introduction</h4>
+      <p>If you're experiencing a technical issue — such as a computer not working, software problems, internet connectivity issues, or any other IT-related concern — you can report it quickly using our IT support system called <strong>GLPI</strong>. This guide walks you through how to log in and submit a support request so our IT team can assist you as soon as possible.</p>
+      <blockquote><strong>No technical knowledge is required.</strong> Just follow the steps below.</blockquote>
 
-    <!-- ── Step 1 ── -->
-    <div class="step">
-      <div class="step-num">1</div>
-      <div class="step-content">
-        <h2>Open the GLPI Login Page</h2>
-        <p>Open your web browser and go to the GLPI helpdesk portal. Ask IT for the URL if you don't have it saved.</p>
-        <img src="../assets/images/glpi-login.png" alt="GLPI login page" class="screenshot" />
-        <p>Enter your <strong>login</strong> and <strong>password</strong>, leave the Login source as <strong>GLPI internal database</strong>, then click <strong>Sign in</strong>.</p>
-        <div class="callout tip">
-          <strong>Tip:</strong> Tick "Remember me" on your own device so you don't have to log in every time.
-        </div>
-      </div>
-    </div>
+      <h4>Step 1 — Open the GLPI Login Page</h4>
+      <p><em>Link: <a href="https://ticket.hobb-dashboard.com" target="_blank">https://ticket.hobb-dashboard.com</a></em></p>
+      <p>You will be taken to the GLPI login page — a white card with the GLPI logo at the top, and fields for your login and password.</p>
+      <p><strong>What to do:</strong></p>
+      <ol>
+        <li>In the <strong>Login</strong> field, enter your official company email address (e.g. <code>yourname@houseofbluebeans.com</code>).</li>
+        <li>In the <strong>Password</strong> field, enter your system password — the same password you use to log in to your work computer.</li>
+        <li>Leave the <strong>Login source</strong> as <strong>"GLPI internal database"</strong> — do not change this.</li>
+        <li>Optionally tick <strong>"Remember me"</strong> if you are on your personal work computer (avoid this on shared machines).</li>
+        <li>Click the yellow <strong>Sign in</strong> button.</li>
+      </ol>
+      <blockquote>💡 <strong>Tip:</strong> If you've forgotten your password, click the <strong>"Forgotten password?"</strong> link on the login page and follow the instructions, or contact the IT team directly.</blockquote>
+      <img src="../assets/images/glpi-login.png" alt="GLPI login page" class="doc-img" />
 
-    <!-- ── Step 2 ── -->
-    <div class="step">
-      <div class="step-num">2</div>
-      <div class="step-content">
-        <h2>Your Home Screen</h2>
-        <p>After logging in you'll see your ticket dashboard. All your tickets are listed here with their current status:</p>
-        <img src="../assets/images/glpi-home.png" alt="GLPI home screen showing ticket statuses" class="screenshot" />
-        <table class="status-table">
-          <thead>
-            <tr><th>Status</th><th>What it means</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><span class="status-badge badge-new">● New</span></td><td>Ticket received, not yet picked up by IT</td></tr>
-            <tr><td><span class="status-badge badge-assigned">○ Processing (assigned)</span></td><td>An IT team member has been assigned to it</td></tr>
-            <tr><td><span class="status-badge badge-planned">▣ Processing (planned)</span></td><td>Work is scheduled for a specific time</td></tr>
-            <tr><td><span class="status-badge badge-pending">● Pending</span></td><td>Waiting for more information from you</td></tr>
-            <tr><td><span class="status-badge badge-solved">○ Solved</span></td><td>IT has resolved the issue</td></tr>
-            <tr><td><span class="status-badge badge-closed">● Closed</span></td><td>Ticket is complete and closed</td></tr>
-            <tr><td><span class="status-badge badge-deleted">● Deleted</span></td><td>Ticket has been removed</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+      <h4>Step 2 — Your Home Screen</h4>
+      <p>After logging in you will see your ticket dashboard. Any tickets you have raised before are listed here with their current status.</p>
+      <img src="../assets/images/glpi-home.png" alt="GLPI home screen" class="doc-img" />
+      <table class="doc-table">
+        <thead>
+          <tr><th>Status</th><th>What it means</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>New</td><td>Ticket received, not yet picked up by IT</td></tr>
+          <tr><td>Processing (assigned)</td><td>An IT team member has been assigned to it</td></tr>
+          <tr><td>Processing (planned)</td><td>Work is scheduled for a specific time</td></tr>
+          <tr><td>Pending</td><td>Waiting for more information from you</td></tr>
+          <tr><td>Solved</td><td>IT has resolved the issue</td></tr>
+          <tr><td>Closed</td><td>Ticket is complete and closed</td></tr>
+          <tr><td>Deleted</td><td>Ticket has been removed</td></tr>
+        </tbody>
+      </table>
 
-    <!-- ── Step 3 ── -->
-    <div class="step">
-      <div class="step-num">3</div>
-      <div class="step-content">
-        <h2>Click "+ Create a ticket"</h2>
-        <p>Click the <strong>+ Create a ticket</strong> button at the top of your dashboard, or use the link in the left-hand menu.</p>
-        <p>This opens the new ticket form.</p>
-      </div>
-    </div>
+      <h4>Step 3 — Click "+ Create a ticket"</h4>
+      <p>Click the <strong>+ Create a ticket</strong> button at the top right of your dashboard, or use the link in the left-hand menu. This opens the new ticket form.</p>
 
-    <!-- ── Step 4 ── -->
-    <div class="step">
-      <div class="step-num">4</div>
-      <div class="step-content">
-        <h2>Fill In the Ticket Details</h2>
-        <p>Complete the form as described below. Fields marked <strong>*</strong> are required.</p>
-        <img src="../assets/images/glpi-create-ticket.png" alt="GLPI create a ticket form" class="screenshot" />
+      <h4>Step 4 — Fill In the Ticket Details</h4>
+      <p>Complete each field in the form as described below. Fields marked with a red asterisk (*) are required.</p>
+      <img src="../assets/images/glpi-create-ticket.png" alt="GLPI create a ticket form" class="doc-img" />
+      <ol>
+        <li>
+          <strong>Type</strong> — Choose <em>Incident</em> if something is broken or not working. Choose <em>Request</em> if you need something new (software, access, or equipment).
+        </li>
+        <li>
+          <strong>Category</strong> — Pick the category that best matches your issue (e.g. Hardware, Software, Network, Account). If unsure, leave it blank — IT will assign the right category.
+        </li>
+        <li>
+          <strong>Urgency</strong> — Default is <em>Medium</em>. Only raise this if your work is completely blocked. Marking everything urgent slows response times for everyone.
+        </li>
+        <li>
+          <strong>Associated Elements</strong> — If the issue relates to a specific device registered in GLPI, link it here using the <strong>+</strong> button. This field is optional.
+        </li>
+        <li>
+          <strong>Watchers</strong> — Add a colleague or manager here if they should receive updates on this ticket. Optional.
+        </li>
+        <li>
+          <strong>Title *</strong> — Write a short, clear one-line summary of the problem.<br/>
+          ✅ Good: <em>"Laptop won't connect to office Wi-Fi since this morning"</em><br/>
+          ❌ Vague: <em>"Wi-Fi not working"</em>
+        </li>
+        <li>
+          <strong>Description *</strong> — Explain the issue in detail. Include: what you were doing when it happened, any error messages you saw, and what you've already tried.<br/><br/>
+          <em>Example: "I was trying to print a document from my HP EliteBook (Windows 11) at 9 am. The printer shows as offline even though it worked yesterday. I've restarted the laptop and printer but the problem continues."</em>
+        </li>
+        <li>
+          <strong>File Attachment</strong> — Drag and drop a screenshot of any error message, or click <strong>Choose files</strong>. Maximum file size: 2 MB. This helps IT diagnose the issue faster.
+        </li>
+      </ol>
+      <blockquote>💡 <strong>Tip:</strong> The more detail you give in the description, the faster IT can resolve your issue — good descriptions cut out multiple back-and-forth messages.</blockquote>
 
-        <div class="field-block">
-          <strong>Type</strong>
-          <p>Choose <em>Incident</em> if something is broken or not working. Choose <em>Request</em> if you need something new — software, access, or equipment.</p>
-        </div>
+      <h4>Step 5 — Submit the Ticket</h4>
+      <p>Once all required fields are filled in, click the <strong>+ Submit message</strong> button at the bottom of the form.</p>
+      <p>You'll be taken to your new ticket's page showing its ID number and current status. You'll also receive a confirmation email.</p>
+      <blockquote>💡 <strong>Keep your ticket ID.</strong> If you follow up with IT by phone or email, quoting the ticket ID (e.g. <em>#1042</em>) lets IT find your case instantly.</blockquote>
 
-        <div class="field-block">
-          <strong>Category</strong>
-          <p>Pick the category that best matches your issue (e.g. Hardware, Software, Network, Account). If unsure, leave it blank — IT will set the right one.</p>
-        </div>
-
-        <div class="field-block">
-          <strong>Urgency</strong>
-          <p>Default is <em>Medium</em>. Only raise this if your work is completely blocked. Marking everything urgent slows response times for everyone.</p>
-        </div>
-
-        <div class="field-block">
-          <strong>Associated Elements</strong>
-          <p>If the issue relates to a specific device registered in GLPI, link it here using the <strong>+</strong> button. Optional.</p>
-        </div>
-
-        <div class="field-block">
-          <strong>Watchers</strong>
-          <p>Add a colleague or manager here if they should receive updates on this ticket. Optional.</p>
-        </div>
-
-        <div class="field-block">
-          <strong>Title *</strong>
-          <p>Write a short, clear summary of the problem in one line.</p>
-        </div>
-        <div class="example-block">✅  Laptop won't connect to office Wi-Fi since this morning<br/>❌  Wi-Fi not working</div>
-
-        <div class="field-block">
-          <strong>Description *</strong>
-          <p>Explain the issue in detail — what you were doing when it happened, any error messages, and what you've already tried.</p>
-        </div>
-        <div class="example-block">I was trying to print from my HP EliteBook (Windows 11) at 9 am.<br/>The printer shows as offline even though it worked yesterday.<br/>I've restarted the laptop and printer but the problem continues.</div>
-
-        <div class="field-block">
-          <strong>File Attachment</strong>
-          <p>Drag and drop a screenshot of any error message onto the upload box, or click <strong>Choose files</strong>. Maximum file size: 2 MB. This helps IT diagnose the issue faster.</p>
-        </div>
-
-        <div class="callout tip">
-          <strong>Tip:</strong> The more detail you give, the faster IT can fix it — good descriptions cut out multiple back-and-forth messages.
-        </div>
-      </div>
-    </div>
-
-    <!-- ── Step 5 ── -->
-    <div class="step">
-      <div class="step-num">5</div>
-      <div class="step-content">
-        <h2>Submit the Ticket</h2>
-        <p>Once all required fields are filled, click the <strong>+ Submit message</strong> button at the bottom of the form.</p>
-        <p>You'll be taken to your new ticket's page showing its ID number and current status. You'll also receive a confirmation email.</p>
-        <div class="callout tip">
-          <strong>Keep your ticket ID.</strong> If you follow up by phone or email, quoting the ID (e.g. <em>#1042</em>) lets IT find your case instantly.
-        </div>
-      </div>
-    </div>
-
-    <!-- Next steps -->
-    <div class="next-steps">
-      <h3>✅ What happens next?</h3>
+      <h4>What Happens Next?</h4>
       <ul>
         <li>IT will review and assign your ticket to the right person.</li>
         <li>You'll receive email updates whenever the status changes.</li>
-        <li>If IT needs more info, they'll add a comment — reply directly in GLPI or by email.</li>
+        <li>If IT needs more information, they'll add a comment — you can reply directly in GLPI or by email.</li>
         <li>Once solved, confirm the issue is fixed and the ticket will be closed.</li>
       </ul>
-    </div>
 
+    </div>
   </div>
 
   <div class="contact-bar">
