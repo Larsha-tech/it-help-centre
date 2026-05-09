@@ -3,6 +3,7 @@
   background: #fff;
   min-height: calc(100vh - 60px);
   padding: 2rem 1rem;
+  background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100px, #ffffff 100%);
 }
 
 .doc-body {
@@ -28,8 +29,13 @@
 .doc-body h4 {
   font-size: 1rem;
   font-weight: 700;
-  color: #111;
-  margin: 2rem 0 .4rem 0;
+  color: #1e3a8a;
+  margin: 2.25rem 0 .6rem 0;
+  padding: .55rem .9rem;
+  background: #eff6ff;
+  border-left: 4px solid #1d4ed8;
+  border-radius: 0 6px 6px 0;
+  letter-spacing: -.01em;
 }
 
 /* Paragraphs */
@@ -53,13 +59,14 @@
 
 /* Blockquotes (tips / notes) */
 .doc-body blockquote {
-  border-left: 4px solid #1d4ed8;
+  border-left: 4px solid #2563eb;
   background: #eff6ff;
   color: #1e3a8a;
-  margin: 1rem 0;
-  padding: .75rem 1rem .75rem 1.25rem;
-  border-radius: 0 6px 6px 0;
-  font-size: .9rem;
+  margin: 1.1rem 0;
+  padding: .9rem 1.1rem .9rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  font-size: .875rem;
+  box-shadow: 0 1px 6px rgba(37,99,235,.08);
 }
 
 .doc-body blockquote p {
