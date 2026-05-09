@@ -264,7 +264,7 @@ nav { display: flex; align-items: center; gap: .2rem; }
   background: linear-gradient(180deg, #07091a 0%, #06071a 100%);
   border-top: 1px solid rgba(255,255,255,.05);
 }
-.contact-inner { max-width: 940px; margin: 0 auto; }
+.contact-inner { max-width: 1100px; margin: 0 auto; }
 .contact-hd { text-align: center; margin-bottom: 2.5rem; }
 .contact-sub {
   margin-top: .75rem;
@@ -280,7 +280,7 @@ nav { display: flex; align-items: center; gap: .2rem; }
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 18px;
-  padding: 1.5rem 1.35rem;
+  padding: 1.5rem 1.6rem;
   display: flex; align-items: flex-start; gap: .9rem;
   transition: background .2s, border-color .2s, transform .25s;
 }
@@ -306,8 +306,9 @@ nav { display: flex; align-items: center; gap: .2rem; }
 .ccard-val {
   font-size: .875rem; font-weight: 600;
   color: rgba(255,255,255,.8);
-  word-break: break-word; line-height: 1.4;
+  line-height: 1.4;
   display: block;
+  white-space: nowrap;
 }
 .ccard-link { color: #93c5fd; }
 .ccard-link:hover { text-decoration: underline; }
