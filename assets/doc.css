@@ -1,3 +1,6 @@
+/* Override dark homepage background for guide pages */
+body { background: #fff; }
+
 /* ── Document page layout ── */
 .doc-wrap {
   min-height: calc(100vh - 60px);
