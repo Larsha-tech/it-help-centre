@@ -59,14 +59,14 @@
 
 /* Blockquotes (tips / notes) */
 .doc-body blockquote {
-  border-left: 4px solid #2563eb;
-  background: #eff6ff;
-  color: #1e3a8a;
+  border-left: 4px solid #d97706;
+  background: #fffbeb;
+  color: #78350f;
   margin: 1.1rem 0;
   padding: .9rem 1.1rem .9rem 1.25rem;
   border-radius: 0 8px 8px 0;
   font-size: .875rem;
-  box-shadow: 0 1px 6px rgba(37,99,235,.08);
+  box-shadow: 0 1px 6px rgba(217,119,6,.08);
 }
 
 .doc-body blockquote p {
