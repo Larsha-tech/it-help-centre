@@ -399,11 +399,14 @@ body { background: #fff; }
   color: inherit;
   transition: border-color .2s, box-shadow .2s, transform .2s;
 }
+.related-card,
 .related-card:hover {
   border-color: #93c5fd;
+  text-decoration: none;
+}
+.related-card:hover {
   box-shadow: 0 4px 16px rgba(37,99,235,.1);
   transform: translateY(-2px);
-  text-decoration: none;
 }
 .related-card-icon {
   font-size: 1.4rem;
@@ -421,6 +424,7 @@ body { background: #fff; }
   font-size: .9rem;
   color: #0f172a;
   margin-bottom: .2rem;
+  text-decoration: none;
 }
-.related-card-text span { font-size: .8rem; color: #64748b; }
+.related-card-text span { font-size: .8rem; color: #64748b; text-decoration: none; }
 .related-card-arrow { margin-left: auto; color: #93c5fd; flex-shrink: 0; }
