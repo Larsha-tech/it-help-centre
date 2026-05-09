@@ -1,346 +1,98 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IT Help Centre – House of Blue Beans</title>
   <link rel="icon" type="image/png" href="assets/images/logo.png" />
-  <link rel="stylesheet" href="assets/style.css?v=4" />
+  <link rel="stylesheet" href="assets/style.css?v=3" />
 </head>
 <body>
 
-  <!-- ── ANNOUNCEMENT BANNER ── -->
-  <div class="announcement-bar" id="announcementBar">
-    <div class="announcement-inner">
-      <span class="announcement-dot"></span>
-      <span><strong>Scheduled Maintenance:</strong> Autodesk License Server – Saturday 10 May, 10:00–14:00 IST. Services may be intermittently unavailable.</span>
-      <button class="announcement-close" id="closeAnnouncement" aria-label="Dismiss">✕</button>
+  <header>
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="House of Blue Beans Logo" />
+      <div class="logo-divider"></div>
+      <span class="logo-text">House of Blue Beans – IT Help Centre</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#guides">Guides</a>
+      <a href="#contact">Contact IT</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-badge">IT Support · Internal</div>
+    <h1>How can we help you today?</h1>
+    <p>Step-by-step guides to help you solve common IT issues</p>
+    <div class="hero-search">
+      <span class="hero-search-icon">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </span>
+      <input type="text" placeholder="Search for a guide…" />
     </div>
   </div>
 
-  <!-- ── HEADER ── -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img src="assets/images/logo.png" alt="House of Blue Beans" />
-        <div class="logo-divider"></div>
-        <span class="logo-text">IT Help Centre</span>
+  <div class="section" id="guides">
+    <div class="section-title">Guides <span class="section-count">2</span></div>
+    <div class="card-grid">
+
+      <a class="card" href="guides/raise-it-ticket.html">
+        <div class="card-icon">🎫</div>
+        <h3>How to Raise an IT Support Ticket</h3>
+        <p>Log a request or report a problem through our GLPI ticketing system so IT can help you fast.</p>
+        <div class="card-footer">
+          <span class="card-tag">Ticketing</span>
+          <span class="card-arrow">→</span>
+        </div>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="#guides" class="nav-link">Guides</a>
-        <a href="https://ticket.hobb-dashboard.com" target="_blank" rel="noopener noreferrer" class="nav-link">My Tickets</a>
-        <a href="#quick-access" class="nav-link">Downloads</a>
-        <a href="#contact" class="nav-link">Contact IT</a>
-      </nav>
-      <div class="header-actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="icon-sun" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <svg class="icon-moon" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <button class="icon-btn notif-btn" id="notifBtn" aria-label="Notifications">
-          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          <span class="notif-dot"></span>
-        </button>
-        <button class="avatar" id="avatarBtn" aria-label="Account menu">AD</button>
+
+      <a class="card" href="guides/parallels-ras.html">
+        <div class="card-icon">🖥️</div>
+        <h3>How to Access Your Office PC Remotely</h3>
+        <p>Connect to your office PC from home using the Parallels RAS Client — step by step from download to desktop.</p>
+        <div class="card-footer">
+          <span class="card-tag">Remote Access</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="contact-band" id="contact">
+    <div class="contact-band-inner">
+      <div class="section-title">Contact IT Support</div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <div>
+            <strong>Phone</strong>
+            <span>+91 8088461724</span>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <div>
+            <strong>Email</strong>
+            <span>ithelpdesk@houseofbluebeans.com</span>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🎫</div>
+          <div>
+            <strong>GLPI Portal</strong>
+            <a href="https://ticket.hobb-dashboard.com" target="_blank" rel="noopener noreferrer">ticket.hobb-dashboard.com</a>
+          </div>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
 
-  <main>
-
-    <!-- ── HERO ── -->
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-badge">
-          <span class="pulse-dot"></span>
-          All Systems Operational
-        </div>
-        <h1>How can we help you<br>today?</h1>
-        <p>Step-by-step guides and quick access to IT services.</p>
-
-        <div class="search-wrap">
-          <label class="search-bar" for="searchInput">
-            <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            <input type="search" id="searchInput" placeholder="Search guides, software, remote access…" autocomplete="off" />
-            <kbd class="search-kbd">⌘K</kbd>
-          </label>
-          <div class="search-suggestions">
-            <button class="search-tag" data-query="remote access">Remote Access</button>
-            <button class="search-tag" data-query="raise ticket">Raise Ticket</button>
-            <button class="search-tag" data-query="password reset">Password Reset</button>
-            <button class="search-tag" data-query="outlook">Outlook Setup</button>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <a href="guides/raise-it-ticket.html" class="ha-btn ha-primary">
-            <span class="ha-icon">🎫</span><span>Raise IT Ticket</span>
-          </a>
-          <a href="guides/parallels-ras.html" class="ha-btn">
-            <span class="ha-icon">🖥️</span><span>Access Office PC</span>
-          </a>
-          <a href="guides/raise-it-ticket.html" class="ha-btn">
-            <span class="ha-icon">🔑</span><span>Reset Password</span>
-          </a>
-          <a href="guides/raise-it-ticket.html" class="ha-btn">
-            <span class="ha-icon">📦</span><span>Request Software</span>
-          </a>
-          <a href="guides/raise-it-ticket.html" class="ha-btn ha-danger">
-            <span class="ha-icon">🚨</span><span>Critical Issue</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── SYSTEM STATUS ── -->
-    <section class="status-section">
-      <div class="container">
-        <div class="section-hd">
-          <span class="section-label">Live System Status</span>
-          <a href="#" class="section-more">View full status →</a>
-        </div>
-        <div class="status-grid">
-          <div class="status-card">
-            <div class="status-icon si-blue">📧</div>
-            <div class="status-info">
-              <div class="status-name">Email Services</div>
-              <div class="status-sub">Exchange / Outlook</div>
-            </div>
-            <span class="status-pill pill-ok">● Operational</span>
-          </div>
-          <div class="status-card">
-            <div class="status-icon si-green">🔒</div>
-            <div class="status-info">
-              <div class="status-name">VPN / Remote Access</div>
-              <div class="status-sub">Parallels RAS</div>
-            </div>
-            <span class="status-pill pill-ok">● Operational</span>
-          </div>
-          <div class="status-card">
-            <div class="status-icon si-purple">🎫</div>
-            <div class="status-info">
-              <div class="status-name">GLPI Portal</div>
-              <div class="status-sub">Ticketing System</div>
-            </div>
-            <span class="status-pill pill-ok">● Operational</span>
-          </div>
-          <div class="status-card">
-            <div class="status-icon si-amber">⚙️</div>
-            <div class="status-info">
-              <div class="status-name">Autodesk Licenses</div>
-              <div class="status-sub">License Server</div>
-            </div>
-            <span class="status-pill pill-warn">⚠ Maintenance</span>
-          </div>
-          <div class="status-card">
-            <div class="status-icon si-blue">🌐</div>
-            <div class="status-info">
-              <div class="status-name">Network</div>
-              <div class="status-sub">Office LAN / Wi-Fi</div>
-            </div>
-            <span class="status-pill pill-ok">● Operational</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── POPULAR GUIDES ── -->
-    <section class="guides-section" id="guides">
-      <div class="container">
-        <div class="section-hd">
-          <div>
-            <span class="section-label">Popular Guides</span>
-            <h2 class="section-title">Step-by-step help for common tasks</h2>
-          </div>
-          <a href="#" class="section-more">All guides →</a>
-        </div>
-        <div class="guides-grid" id="guidesGrid">
-
-          <a class="guide-card" href="guides/raise-it-ticket.html">
-            <div class="guide-icon gi-blue">🎫</div>
-            <div class="guide-body">
-              <span class="gcat gcat-ticket">Ticketing</span>
-              <h3>Raise an IT Support Ticket</h3>
-              <p>Log issues and requests through GLPI so the IT team can assist you quickly.</p>
-            </div>
-            <span class="guide-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="guide-card" href="guides/parallels-ras.html">
-            <div class="guide-icon gi-green">🖥️</div>
-            <div class="guide-body">
-              <span class="gcat gcat-remote">Remote Access</span>
-              <h3>Access Your Office PC Remotely</h3>
-              <p>Connect to your office desktop from home using Parallels RAS Client.</p>
-            </div>
-            <span class="guide-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="guide-card guide-soon" href="guides/raise-it-ticket.html">
-            <div class="guide-icon gi-purple">📧</div>
-            <div class="guide-body">
-              <span class="gcat gcat-software">Software</span>
-              <h3>Outlook Email Setup</h3>
-              <p>Configure Microsoft Outlook on your work device step by step.</p>
-            </div>
-            <span class="guide-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="guide-card guide-soon" href="guides/raise-it-ticket.html">
-            <div class="guide-icon gi-amber">⚙️</div>
-            <div class="guide-body">
-              <span class="gcat gcat-software">Software</span>
-              <h3>Install Autodesk License</h3>
-              <p>Set up and activate your Autodesk software and network license.</p>
-            </div>
-            <span class="guide-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="guide-card guide-soon" href="guides/raise-it-ticket.html">
-            <div class="guide-icon gi-pink">🖨️</div>
-            <div class="guide-body">
-              <span class="gcat gcat-hardware">Hardware</span>
-              <h3>Printer Setup</h3>
-              <p>Connect and configure office printers on your Windows machine.</p>
-            </div>
-            <span class="guide-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="guide-card guide-soon" href="guides/raise-it-ticket.html">
-            <div class="guide-icon gi-indigo">🛡️</div>
-            <div class="guide-body">
-              <span class="gcat gcat-security">Security</span>
-              <h3>Antivirus &amp; Security Agent</h3>
-              <p>Install and verify your endpoint security software is active.</p>
-            </div>
-            <span class="guide-arrow" aria-hidden="true">→</span>
-          </a>
-
-        </div>
-        <div class="no-results" id="noResults" hidden>
-          <span>🔍</span>
-          <p>No guides match your search. <a href="guides/raise-it-ticket.html">Raise a ticket</a> and our team will help directly.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── QUICK ACCESS ── -->
-    <section class="qa-section" id="quick-access">
-      <div class="container">
-        <div class="section-hd">
-          <div>
-            <span class="section-label">Quick Access</span>
-            <h2 class="section-title">Tools &amp; resources</h2>
-          </div>
-        </div>
-        <div class="qa-grid">
-          <a class="qa-card" href="https://ticket.hobb-dashboard.com" target="_blank" rel="noopener noreferrer">
-            <div class="qa-icon">🎫</div>
-            <div class="qa-name">GLPI Portal</div>
-            <div class="qa-sub">Helpdesk tickets</div>
-            <span class="qa-ext" aria-hidden="true">↗</span>
-          </a>
-          <a class="qa-card" href="#">
-            <div class="qa-icon">📚</div>
-            <div class="qa-name">BookStack Docs</div>
-            <div class="qa-sub">IT documentation</div>
-            <span class="qa-ext" aria-hidden="true">↗</span>
-          </a>
-          <a class="qa-card" href="guides/parallels-ras.html">
-            <div class="qa-icon">🔒</div>
-            <div class="qa-name">VPN Download</div>
-            <div class="qa-sub">Parallels RAS client</div>
-            <span class="qa-ext" aria-hidden="true">↗</span>
-          </a>
-          <a class="qa-card" href="#">
-            <div class="qa-icon">📦</div>
-            <div class="qa-name">Software Catalog</div>
-            <div class="qa-sub">Approved apps</div>
-            <span class="qa-ext" aria-hidden="true">↗</span>
-          </a>
-          <a class="qa-card" href="guides/raise-it-ticket.html">
-            <div class="qa-icon">🖥️</div>
-            <div class="qa-name">Asset Request</div>
-            <div class="qa-sub">Hardware requests</div>
-            <span class="qa-ext" aria-hidden="true">↗</span>
-          </a>
-          <a class="qa-card" href="#">
-            <div class="qa-icon">📋</div>
-            <div class="qa-name">IT Policies</div>
-            <div class="qa-sub">Acceptable use</div>
-            <span class="qa-ext" aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CONTACT IT ── -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="section-hd">
-          <div>
-            <span class="section-label">Get in Touch</span>
-            <h2 class="section-title">Contact IT Support</h2>
-          </div>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-card cc-phone">
-            <div class="cc-icon">📞</div>
-            <div class="cc-body">
-              <div class="cc-label">Phone</div>
-              <div class="cc-value">+91 8088461724</div>
-              <div class="cc-sub">Mon–Fri, 9 am–6 pm IST</div>
-            </div>
-          </div>
-          <div class="contact-card cc-email">
-            <div class="cc-icon">📧</div>
-            <div class="cc-body">
-              <div class="cc-label">Email</div>
-              <a href="mailto:ithelpdesk@houseofbluebeans.com" class="cc-value cc-link">ithelpdesk@houseofbluebeans.com</a>
-              <div class="cc-sub">Response within 4 hours</div>
-            </div>
-          </div>
-          <div class="contact-card cc-portal">
-            <div class="cc-icon">🎫</div>
-            <div class="cc-body">
-              <div class="cc-label">Helpdesk Portal</div>
-              <a href="https://ticket.hobb-dashboard.com" target="_blank" rel="noopener noreferrer" class="cc-value cc-link">ticket.hobb-dashboard.com</a>
-              <div class="cc-sub">Track your tickets 24/7</div>
-            </div>
-          </div>
-          <div class="contact-card cc-emergency">
-            <div class="cc-icon">🚨</div>
-            <div class="cc-body">
-              <div class="cc-label">Emergency Support</div>
-              <a href="guides/raise-it-ticket.html" class="cc-value cc-link">Raise a priority ticket</a>
-              <div class="cc-sub">Set urgency to Critical</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ── FOOTER ── -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="House of Blue Beans" height="26" />
-        <span>House of Blue Beans – IT Help Centre</span>
-      </div>
-      <div class="footer-copy">
-        &copy; 2026 House of Blue Beans. Internal use only. Unauthorised access is prohibited.
-      </div>
-      <div class="footer-links">
-        <a href="#">IT Policies</a>
-        <a href="#">Privacy Notice</a>
-        <a href="https://ticket.hobb-dashboard.com" target="_blank" rel="noopener noreferrer">Raise a Ticket</a>
-      </div>
-    </div>
+  <footer>
+    &copy; 2026 House of Blue Beans &mdash; IT Help Centre. Internal use only.
   </footer>
 
-  <script src="assets/main.js?v=2"></script>
 </body>
 </html>
