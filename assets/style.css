@@ -29,36 +29,93 @@ nav a:hover { background: #f1f5f9; color: #1e293b; }
 
 /* ── Hero ── */
 .hero {
-  background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #1e40af 100%);
   color: #fff;
-  padding: 3.5rem 2.5rem 3rem;
+  padding: 5.5rem 2.5rem 5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-.hero h1 { font-size: 2rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: .6rem; }
-.hero p { font-size: 1rem; color: #93c5fd; max-width: 500px; margin: 0 auto; }
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 700px; height: 700px; border-radius: 50%;
+  background: rgba(255,255,255,.03);
+  top: -320px; right: -180px;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: rgba(99,102,241,.07);
+  bottom: -260px; left: -140px;
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex; align-items: center;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.18);
+  color: #bfdbfe;
+  font-size: .7rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: .35rem 1rem; border-radius: 999px;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.hero h1 { font-size: 2.6rem; font-weight: 800; letter-spacing: -.03em; margin-bottom: .75rem; position: relative; }
+.hero p { font-size: 1rem; color: #93c5fd; max-width: 460px; margin: 0 auto; opacity: .9; position: relative; }
 
 /* ── Sections ── */
-.section { padding: 2.75rem 2.5rem; max-width: 1080px; margin: 0 auto; }
-.section-title { font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: 1.25rem; display: flex; align-items: center; gap: .5rem; }
+.section { padding: 3rem 2.5rem; max-width: 1080px; margin: 0 auto; }
+.section-title {
+  font-size: .9rem; font-weight: 700; color: #0f172a;
+  margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: .7rem;
+  letter-spacing: .04em; text-transform: uppercase;
+}
+.section-title::before {
+  content: '';
+  width: 3px; height: 16px;
+  background: linear-gradient(180deg, #3b82f6, #6366f1);
+  border-radius: 2px; flex-shrink: 0;
+}
 
 /* ── Guide cards ── */
-.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1rem; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
 .card {
   background: #fff;
   border: 1px solid #e8ecf3;
-  border-radius: 14px;
-  padding: 1.5rem;
-  transition: box-shadow .2s, border-color .2s;
+  border-radius: 16px;
+  padding: 1.75rem;
+  transition: box-shadow .25s, border-color .25s, transform .25s;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
 }
-.card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.08); border-color: #c7d2fe; }
-.card-icon { font-size: 1.75rem; margin-bottom: .75rem; }
-.card h3 { font-size: .95rem; font-weight: 700; margin-bottom: .35rem; color: #0f172a; }
-.card p { font-size: .85rem; color: #64748b; margin-bottom: 1rem; line-height: 1.5; }
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .25s;
+}
+.card:hover { box-shadow: 0 14px 36px rgba(0,0,0,.09); border-color: #dde5ff; transform: translateY(-3px); }
+.card:hover::before { transform: scaleX(1); }
+.card-icon {
+  width: 48px; height: 48px;
+  background: #eff6ff; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; margin-bottom: 1.1rem; flex-shrink: 0;
+}
+.card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; color: #0f172a; letter-spacing: -.01em; }
+.card p { font-size: .875rem; color: #64748b; line-height: 1.55; flex: 1; }
 .card-tag {
-  display: inline-block; font-size: .7rem; font-weight: 600;
-  letter-spacing: .05em; text-transform: uppercase;
+  display: inline-block; font-size: .68rem; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase;
   padding: .2rem .65rem; border-radius: 999px;
   background: #eff6ff; color: #1d4ed8;
+  margin-top: 1rem;
 }
 .card-link {
   display: inline-flex; align-items: center; gap: .35rem;
@@ -68,16 +125,23 @@ nav a:hover { background: #f1f5f9; color: #1e293b; }
 .card-link:hover { gap: .6rem; }
 
 /* ── Contact ── */
-.contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .85rem; }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
 .contact-card {
-  background: #fff; border: 1px solid #e8ecf3; border-radius: 12px;
-  padding: 1.1rem 1.25rem; display: flex; align-items: center; gap: .9rem;
+  background: #fff; border: 1px solid #e8ecf3; border-radius: 14px;
+  padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem;
   min-width: 0;
+  transition: box-shadow .2s, border-color .2s;
 }
-.contact-icon { font-size: 1.4rem; flex-shrink: 0; }
-.contact-card strong { display: block; font-size: .75rem; color: #94a3b8; margin-bottom: .1rem; text-transform: uppercase; letter-spacing: .05em; }
-.contact-card span { font-size: .875rem; font-weight: 600; color: #0f172a; word-break: break-all; }
-.contact-card a { font-size: .875rem; font-weight: 600; word-break: break-all; }
+.contact-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.07); border-color: #c7d2fe; }
+.contact-icon {
+  font-size: 1.25rem; flex-shrink: 0;
+  width: 44px; height: 44px;
+  background: #eff6ff; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.contact-card strong { display: block; font-size: .7rem; color: #94a3b8; margin-bottom: .2rem; text-transform: uppercase; letter-spacing: .06em; }
+.contact-card span { font-size: .9rem; font-weight: 600; color: #0f172a; word-break: break-all; }
+.contact-card a { font-size: .9rem; font-weight: 600; word-break: break-all; }
 
 /* ── Footer ── */
 footer {
@@ -187,7 +251,8 @@ footer {
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-  .hero h1 { font-size: 1.55rem; }
+  .hero { padding: 3.5rem 1.5rem 3rem; }
+  .hero h1 { font-size: 1.75rem; }
   .guide-header h1 { font-size: 1.3rem; }
   .step { flex-direction: column; gap: .5rem; }
   nav { display: none; }
