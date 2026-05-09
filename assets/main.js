@@ -152,6 +152,13 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     '</a>';
   docBody.appendChild(related);
 
+  /* Scroll to heading with offset for sticky header */
+  function scrollToHeading(el) {
+    var offset = 80; /* 62px header + 18px breathing room */
+    var top = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  }
+
   /* ── 7. TOC — assign IDs to headings ── */
   var headings = Array.from(docBody.querySelectorAll('h4'));
   if (headings.length < 2) return;
@@ -183,7 +190,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     a.textContent = h.textContent.trim();
     a.addEventListener('click', function (e) {
       e.preventDefault();
-      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      scrollToHeading(h);
     });
     tocNav.appendChild(a);
   });
@@ -209,7 +216,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
       e.preventDefault();
       mobileBtn.classList.remove('open');
       mobileList.classList.remove('open');
-      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      scrollToHeading(h);
     });
     mobileList.appendChild(a);
   });
