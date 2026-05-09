@@ -1,9 +1,75 @@
 /* ── Document page layout ── */
 .doc-wrap {
-  background: #fff;
   min-height: calc(100vh - 60px);
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
   background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100px, #ffffff 100%);
+}
+
+/* Two-column layout when TOC is present */
+.doc-wrap.has-toc {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ── TOC Sidebar ── */
+.toc-sidebar {
+  position: sticky;
+  top: 82px;
+}
+
+.toc-label {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: .85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+.toc-chevron {
+  font-size: .8rem;
+  color: #cbd5e1;
+}
+
+.toc-nav {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #e2e8f0;
+}
+
+.toc-nav a {
+  font-size: .8rem;
+  color: #64748b;
+  padding: .38rem .85rem;
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: color .15s, border-color .15s;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+.toc-nav a:hover { color: #1e3a8a; }
+
+.toc-nav a.toc-active {
+  color: #1d4ed8;
+  border-left-color: #1d4ed8;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .doc-wrap.has-toc {
+    grid-template-columns: 1fr;
+  }
+  .toc-sidebar { display: none; }
 }
 
 .doc-body {
