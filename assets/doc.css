@@ -95,12 +95,10 @@
 .doc-body h4 {
   font-size: 1rem;
   font-weight: 700;
-  color: #1e3a8a;
+  color: #111;
   margin: 2.25rem 0 .6rem 0;
-  padding: .55rem .9rem;
-  background: #eff6ff;
-  border-left: 4px solid #1d4ed8;
-  border-radius: 0 6px 6px 0;
+  padding-left: .75rem;
+  border-left: 3px solid #1d4ed8;
   letter-spacing: -.01em;
 }
 
