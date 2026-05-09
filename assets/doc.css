@@ -188,39 +188,28 @@ body { background: #fff; }
   color: #444;
 }
 
-/* ── Ordered list — numbered circles ── */
+/* ── Ordered list — arrow markers ── */
 .doc-body ol {
   padding-left: 0;
   margin: .5rem 0 1.1rem 0;
   color: #444;
-  counter-reset: step-num;
   list-style: none;
 }
 .doc-body ol > li {
-  counter-increment: step-num;
   position: relative;
-  padding-left: 2.5rem;
+  padding-left: 1.75rem;
   margin-bottom: .75rem;
   line-height: 1.65;
 }
 .doc-body ol > li::before {
-  content: counter(step-num);
+  content: '→';
   position: absolute;
   left: 0;
-  top: .15em;
-  width: 1.6rem;
-  height: 1.6rem;
-  background: #1d4ed8;
-  color: #fff;
-  border-radius: 50%;
-  font-size: .68rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Inter', system-ui, sans-serif;
-  flex-shrink: 0;
-  line-height: 1;
+  top: 0;
+  color: #1d4ed8;
+  font-size: .95rem;
+  font-weight: 600;
+  line-height: 1.65;
 }
 
 /* Unordered list — unchanged */
