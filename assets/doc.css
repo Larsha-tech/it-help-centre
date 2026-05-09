@@ -399,12 +399,13 @@ body { background: #fff; }
   color: inherit;
   transition: border-color .2s, box-shadow .2s, transform .2s;
 }
-.related-card,
-.related-card:hover {
-  border-color: #93c5fd;
+.doc-body a.related-card,
+.doc-body a.related-card:hover,
+.doc-body a.related-card * {
   text-decoration: none;
 }
 .related-card:hover {
+  border-color: #93c5fd;
   box-shadow: 0 4px 16px rgba(37,99,235,.1);
   transform: translateY(-2px);
 }
