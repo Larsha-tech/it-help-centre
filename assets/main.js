@@ -74,6 +74,15 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
   /* ── 4. Copy buttons on code elements ── */
   var copyIcon = '<svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+  function execCopy(text, btn) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showCopied(btn);
+  }
   docBody.querySelectorAll('code').forEach(function (code) {
     var btn = document.createElement('button');
     btn.className = 'copy-btn';
@@ -82,15 +91,11 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     btn.addEventListener('click', function () {
       var text = code.textContent;
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(text).then(function () { showCopied(btn); });
+        navigator.clipboard.writeText(text)
+          .then(function () { showCopied(btn); })
+          .catch(function () { execCopy(text, btn); });
       } else {
-        var ta = document.createElement('textarea');
-        ta.value = text;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        showCopied(btn);
+        execCopy(text, btn);
       }
     });
     code.insertAdjacentElement('afterend', btn);

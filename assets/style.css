@@ -357,7 +357,7 @@ footer span {
 }
 
 /* ══════════════════════════════════════
-   GUIDE PAGES  (unchanged)
+   GUIDE PAGES
 ══════════════════════════════════════ */
 .breadcrumb {
   background: rgba(255,255,255,.03);
@@ -369,75 +369,6 @@ footer span {
 .breadcrumb a:hover { text-decoration: underline; }
 .breadcrumb span { margin: 0 .4rem; }
 
-.guide-header {
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-  color: #fff; padding: 2.25rem 2.5rem 2rem;
-}
-.guide-tag {
-  display: inline-block; background: rgba(255,255,255,.12);
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 999px; padding: .2rem .85rem; font-size: .72rem;
-  letter-spacing: .06em; text-transform: uppercase; margin-bottom: .8rem;
-}
-.guide-header h1 { font-size: 1.65rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: .4rem; }
-.guide-meta { font-size: .82rem; color: #93c5fd; display: flex; gap: 1.25rem; flex-wrap: wrap; }
-
-.guide-body { max-width: 820px; margin: 0 auto; padding: 2.25rem 2.5rem; }
-.step { display: flex; gap: 1.25rem; margin-bottom: 2.25rem; }
-.step-num {
-  flex-shrink: 0; width: 32px; height: 32px;
-  background: #1d4ed8; color: #fff; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 700; font-size: .9rem; margin-top: .15rem;
-}
-.step-content h2 { font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: .5rem; }
-.step-content p  { color: #475569; margin-bottom: .5rem; font-size: .9rem; }
-
-.screenshot {
-  width: 100%; border-radius: 10px; border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 16px rgba(0,0,0,.08); margin: .85rem 0; display: block;
-}
-.field-block {
-  background: #f8fafc; border-left: 3px solid #1d4ed8;
-  border-radius: 0 8px 8px 0; padding: .8rem 1rem; margin: .6rem 0;
-}
-.field-block strong { display: block; color: #0f172a; margin-bottom: .2rem; font-size: .9rem; }
-.field-block p { color: #475569; font-size: .85rem; margin: 0; }
-
-.status-table { width: 100%; border-collapse: collapse; margin: .85rem 0; font-size: .875rem; border-radius: 10px; overflow: hidden; }
-.status-table th { background: #0f172a; color: #fff; padding: .6rem 1rem; text-align: left; font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; }
-.status-table td { padding: .55rem 1rem; border-bottom: 1px solid #f1f5f9; background: #fff; }
-.status-table tr:last-child td { border-bottom: none; }
-.status-badge {
-  display: inline-flex; align-items: center; gap: .35rem;
-  padding: .2rem .7rem; border-radius: 999px; font-size: .75rem; font-weight: 600;
-}
-.badge-new      { background: #dbeafe; color: #1d4ed8; }
-.badge-assigned { background: #e0f2fe; color: #0369a1; }
-.badge-planned  { background: #f0fdf4; color: #166534; }
-.badge-pending  { background: #fef9c3; color: #854d0e; }
-.badge-solved   { background: #dcfce7; color: #166534; }
-.badge-closed   { background: #f1f5f9; color: #475569; }
-.badge-deleted  { background: #fee2e2; color: #991b1b; }
-
-.callout { border-radius: 8px; padding: .9rem 1.1rem; margin: .85rem 0; font-size: .875rem; }
-.callout.tip  { background: #f0fdf4; border-left: 3px solid #22c55e; color: #166534; }
-.callout.info { background: #eff6ff; border-left: 3px solid #3b82f6; color: #1e40af; }
-.callout.warn { background: #fffbeb; border-left: 3px solid #f59e0b; color: #92400e; }
-
-.example-block {
-  background: #1e293b; color: #e2e8f0; border-radius: 8px;
-  padding: .9rem 1.1rem; font-family: 'Cascadia Code', Consolas, monospace;
-  font-size: .85rem; margin: .6rem 0; line-height: 1.6;
-}
-.next-steps {
-  background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px;
-  padding: 1.25rem 1.5rem; margin-top: 2rem;
-}
-.next-steps h3 { color: #1d4ed8; margin-bottom: .6rem; font-size: .95rem; }
-.next-steps ul { padding-left: 1.2rem; color: #1e40af; font-size: .875rem; }
-.next-steps li { margin-bottom: .3rem; }
-
 .contact-bar {
   background: #0f172a; color: #64748b;
   text-align: center; padding: 1.1rem 2rem; font-size: .875rem;
@@ -446,9 +377,5 @@ footer span {
 .contact-bar strong { color: #cbd5e1; }
 
 @media (max-width: 640px) {
-  .guide-header { padding-left: 1.25rem; padding-right: 1.25rem; }
-  .guide-header h1 { font-size: 1.3rem; }
-  .guide-body { padding-left: 1.25rem; padding-right: 1.25rem; }
   .breadcrumb { padding-left: 1.25rem; }
-  .step { flex-direction: column; gap: .5rem; }
 }
