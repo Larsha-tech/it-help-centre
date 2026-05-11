@@ -235,16 +235,23 @@ document.querySelectorAll('.filter-btn').forEach(function (btn) {
   });
 
   /* ── 6. Related guide card ── */
-  var isParallels = window.location.pathname.toLowerCase().includes('parallels');
+  var _path = window.location.pathname.toLowerCase();
+  var _relMap = {
+    parallels:       { href: 'raise-it-ticket.html',  icon: '🎫', title: 'How to Raise an IT Support Ticket',    desc: 'Log a request or report a problem through GLPI.' },
+    'install-windows':{ href: 'raise-it-ticket.html', icon: '🎫', title: 'How to Raise an IT Support Ticket',    desc: 'Need IT help after installing Windows? Log a ticket.' },
+    default:         { href: 'parallels-ras.html',    icon: '🖥️', title: 'How to Access Your Office PC Remotely', desc: 'Connect to your office desktop securely from home.' }
+  };
+  var _relKey = Object.keys(_relMap).find(function(k) { return k !== 'default' && _path.includes(k); }) || 'default';
+  var _rel = _relMap[_relKey];
   var related = document.createElement('div');
   related.className = 'related-guides';
   related.innerHTML =
     '<div class="related-guides-label">Related guide</div>' +
-    '<a class="related-card" href="' + (isParallels ? 'raise-it-ticket.html' : 'parallels-ras.html') + '">' +
-      '<div class="related-card-icon">' + (isParallels ? '🎫' : '🖥️') + '</div>' +
+    '<a class="related-card" href="' + _rel.href + '">' +
+      '<div class="related-card-icon">' + _rel.icon + '</div>' +
       '<div class="related-card-text">' +
-        '<strong>' + (isParallels ? 'How to Raise an IT Support Ticket' : 'How to Access Your Office PC Remotely') + '</strong>' +
-        '<span>' + (isParallels ? 'Log a request or report a problem through GLPI.' : 'Connect to your office desktop securely from home.') + '</span>' +
+        '<strong>' + _rel.title + '</strong>' +
+        '<span>' + _rel.desc + '</span>' +
       '</div>' +
       '<svg class="related-card-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
     '</a>';

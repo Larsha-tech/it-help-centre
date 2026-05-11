@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="All IT guides for House of Blue Beans staff — ticketing, remote access, and more." />
+  <meta name="description" content="All IT guides for House of Blue Beans staff — ticketing, remote access, Windows, and more." />
   <title>All Guides – House of Blue Beans IT Help Centre</title>
   <link rel="icon" type="image/png" href="../assets/images/logo.png" />
-  <link rel="stylesheet" href="../assets/style.css?v=7" />
+  <link rel="stylesheet" href="../assets/style.css?v=8" />
   <link rel="stylesheet" href="../assets/guides-lib.css?v=1" />
 </head>
 <body>
@@ -53,7 +53,7 @@
       <div class="lib-hd">
         <span class="lib-label">Library</span>
         <h1 class="lib-title">All Guides</h1>
-        <p class="lib-count" id="libCount">2 guides across 2 categories</p>
+        <p class="lib-count" id="libCount">3 guides across 3 categories</p>
       </div>
 
       <!-- Search -->
@@ -73,6 +73,7 @@
         </button>
         <button class="lib-pill" data-filter="ticketing">🎫 Ticketing</button>
         <button class="lib-pill" data-filter="remote-access">🖥️ Remote Access</button>
+        <button class="lib-pill" data-filter="windows">🪟 Windows</button>
       </div>
 
       <!-- Empty state -->
@@ -124,6 +125,29 @@
         </div>
       </div>
 
+      <!-- ── Windows ── -->
+      <div class="lib-section" data-category="windows">
+        <div class="lib-section-hd">
+          <h2 class="lib-section-title">
+            🪟 Windows
+            <span class="lib-section-count">1 guide</span>
+          </h2>
+        </div>
+        <p class="lib-section-desc">Guides for installing, reinstalling, and setting up Windows on your home PC.</p>
+        <div class="lib-grid">
+
+          <a class="lib-card" href="install-windows.html" data-title="install windows on your home pc" data-desc="reinstall or upgrade windows on a corrupted or outdated home pc using the media creation tool bootable usb">
+            <div class="lib-card-top">
+              <span class="lib-card-icon">🪟</span>
+              <span class="lib-card-badge lbd-orange">Windows</span>
+            </div>
+            <h3 class="lib-card-title">Install Windows on Your Home PC</h3>
+            <p class="lib-card-desc">PC corrupted or upgrading to the latest Windows? Create a bootable USB, back up your files, and complete a clean install or upgrade — step by step.</p>
+          </a>
+
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -134,13 +158,12 @@
     </div>
   </footer>
 
-  <script src="../assets/main.js?v=7"></script>
+  <script src="../assets/main.js?v=8"></script>
   <script>
     (function () {
       var search   = document.getElementById('libSearch');
       var pills    = document.querySelectorAll('.lib-pill');
       var sections = document.querySelectorAll('.lib-section');
-      var cards    = document.querySelectorAll('.lib-card');
       var empty    = document.getElementById('libEmpty');
       var activeFilter = 'all';
 

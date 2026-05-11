@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How to install or reinstall Windows on your home PC — a step-by-step guide for House of Blue Beans staff whose PC is corrupted or needs upgrading." />
+  <title>How to Install Windows on Your Home PC – House of Blue Beans IT Help Centre</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+  <link rel="stylesheet" href="../assets/style.css?v=8" />
+  <link rel="stylesheet" href="../assets/doc.css?v=12" />
+</head>
+<body>
+
+  <header>
+    <div class="hdr-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.png" alt="House of Blue Beans" />
+        <div class="logo-sep"></div>
+        <span class="logo-label">IT Help Centre</span>
+      </a>
+      <nav>
+        <a href="../index.html" class="nav-a">Home</a>
+        <a href="../index.html#guides" class="nav-a">Guides</a>
+        <a href="../index.html#contact" class="nav-a">Contact IT</a>
+      </nav>
+      <div class="hdr-controls">
+        <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle light/dark mode">
+          <svg class="icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-mobile">
+      <a href="../index.html" class="nav-mobile-a">Home</a>
+      <a href="../index.html#guides" class="nav-mobile-a">Guides</a>
+      <a href="../index.html#contact" class="nav-mobile-a">Contact IT</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../index.html#guides">Guides</a>
+    <span>›</span>
+    How to Install Windows on Your Home PC
+  </div>
+
+  <div class="doc-wrap">
+    <div class="doc-body" data-updated="May 2026">
+
+      <h1>How to Install Windows on Your Home PC</h1>
+
+      <h4>Introduction</h4>
+      <p>This guide covers two scenarios — <strong>reinstalling Windows</strong> on a corrupted or broken PC, and <strong>upgrading</strong> your existing Windows installation to the latest version (Windows 11). Both use the same free tool from Microsoft.</p>
+      <p>You do not need to be technical to follow these steps. The process takes around <strong>30–60 minutes</strong> depending on your internet speed and PC speed.</p>
+      <blockquote><strong>Before you start:</strong> No technical knowledge is required, but read this guide fully before you begin. A clean reinstall will erase everything on your PC — make sure you back up first (Step 1).</blockquote>
+
+      <h4>What You Will Need</h4>
+      <ul>
+        <li>A <strong>USB drive with at least 8 GB of free space</strong> — any files on it will be erased, so move them off first.</li>
+        <li>A working internet connection to download the Windows installer (approximately 5 GB).</li>
+        <li>A second computer or the same PC (if it can still browse the web) to download the Media Creation Tool.</li>
+        <li>Your <strong>Microsoft account email and password</strong> if you use one — you will need it during setup.</li>
+      </ul>
+      <blockquote>💡 <strong>Tip:</strong> Windows 10 and Windows 11 licences are tied to your PC's hardware. You do not need a product key — Windows will activate automatically once connected to the internet after installation.</blockquote>
+
+      <h4>Step 1 — Back Up Your Files First</h4>
+      <p>A clean install erases <strong>everything</strong> on your PC — documents, photos, downloads, installed programs. Before continuing, copy anything important to an external drive, USB, or cloud storage (OneDrive, Google Drive).</p>
+      <p>Things to back up:</p>
+      <ul>
+        <li>Documents, Desktop, Downloads, Pictures, Music, Videos folders</li>
+        <li>Browser bookmarks (export from your browser settings)</li>
+        <li>Any work files saved locally</li>
+        <li>Passwords stored in your browser (export or note them down)</li>
+      </ul>
+      <blockquote>💡 <strong>Upgrading instead of reinstalling?</strong> If your PC is working but you just want the latest Windows version, you can choose <strong>"Keep my files"</strong> during Step 5 and skip the backup — but doing a backup is still strongly recommended.</blockquote>
+
+      <h4>Step 2 — Download the Windows Media Creation Tool</h4>
+      <p>Microsoft provides a free official tool to create a Windows installer USB. Download it from the Microsoft website:</p>
+      <ul>
+        <li><strong>Windows 11:</strong> <a href="https://www.microsoft.com/en-gb/software-download/windows11" target="_blank" rel="noopener noreferrer">microsoft.com/en-gb/software-download/windows11</a></li>
+        <li><strong>Windows 10:</strong> <a href="https://www.microsoft.com/en-gb/software-download/windows10" target="_blank" rel="noopener noreferrer">microsoft.com/en-gb/software-download/windows10</a></li>
+      </ul>
+      <p>On the page, click <strong>"Download Now"</strong> under <em>Create Windows installation media</em>. This downloads a small tool called <code>MediaCreationTool.exe</code> — run it once it has downloaded.</p>
+      <blockquote>💡 <strong>Which version?</strong> If your PC shipped with Windows 10, use Windows 10. If you want to upgrade to Windows 11, check first that your PC meets the requirements — on your current Windows, go to <strong>Settings → Windows Update → Windows 11</strong> to see if your device is eligible.</blockquote>
+
+      <h4>Step 3 — Create a Bootable USB Drive</h4>
+      <p>Plug your USB drive (8 GB+) into the PC, then follow the Media Creation Tool steps:</p>
+      <ol>
+        <li>Accept the licence terms.</li>
+        <li>On the <em>"What do you want to do?"</em> screen, select <strong>"Create installation media (USB flash drive, DVD, or ISO file) for another PC"</strong> and click <strong>Next</strong>.</li>
+        <li>Leave the language, edition, and architecture as the recommended defaults and click <strong>Next</strong>.</li>
+        <li>Select <strong>"USB flash drive"</strong> and click <strong>Next</strong>.</li>
+        <li>Choose your USB drive from the list and click <strong>Next</strong>.</li>
+        <li>The tool will download Windows and write it to the USB. This takes <strong>15–40 minutes</strong> depending on your internet speed. Leave the PC plugged in and do not remove the USB.</li>
+        <li>When it says <em>"Your USB flash drive is ready"</em>, click <strong>Finish</strong>.</li>
+      </ol>
+      <img class="doc-img" src="../assets/images/windows-usb-ready.png" alt="Media Creation Tool showing USB flash drive is ready" />
+
+      <h4>Step 4 — Boot Your PC From the USB Drive</h4>
+      <p>Keep the USB plugged in and restart your PC. You need to tell the PC to start from the USB rather than from the internal drive.</p>
+      <ol>
+        <li><strong>Restart</strong> your PC and immediately press the boot menu key repeatedly. The key varies by manufacturer:</li>
+      </ol>
+      <table>
+        <thead><tr><th>Manufacturer</th><th>Key to press</th></tr></thead>
+        <tbody>
+          <tr><td>Dell</td><td><code>F12</code></td></tr>
+          <tr><td>HP</td><td><code>F9</code> or <code>Esc</code></td></tr>
+          <tr><td>Lenovo</td><td><code>F12</code> or <code>Fn + F12</code></td></tr>
+          <tr><td>Asus</td><td><code>F8</code> or <code>Esc</code></td></tr>
+          <tr><td>Acer</td><td><code>F12</code></td></tr>
+          <tr><td>MSI</td><td><code>F11</code></td></tr>
+        </tbody>
+      </table>
+      <ol start="2">
+        <li>A boot menu will appear. Use the arrow keys to select your USB drive (it may be listed as the drive brand name or as <em>"USB Storage Device"</em>) and press <strong>Enter</strong>.</li>
+        <li>The PC will restart and load the Windows Setup screen — a blue screen with <em>"Windows Setup"</em> at the top.</li>
+      </ol>
+      <blockquote>💡 <strong>Nothing happened?</strong> If the PC boots into Windows as normal, the boot menu key wasn't pressed in time. Restart and try again — you need to press it repeatedly from the moment the screen turns on.</blockquote>
+
+      <h4>Step 5 — Install Windows</h4>
+      <p>You are now inside the Windows installer. Follow the on-screen steps:</p>
+      <ol>
+        <li>Select your <strong>language</strong>, <strong>time format</strong>, and <strong>keyboard layout</strong>, then click <strong>Next</strong>.</li>
+        <li>Click <strong>Install Now</strong>.</li>
+        <li>On the <em>"Activate Windows"</em> screen, click <strong>"I don't have a product key"</strong> — Windows will activate automatically later.</li>
+        <li>Select the Windows edition that matches what was on your PC (usually <strong>Windows 11 Home</strong> or <strong>Windows 10 Home</strong>) and click <strong>Next</strong>.</li>
+        <li>Accept the licence agreement and click <strong>Next</strong>.</li>
+        <li>On the <em>"Which type of installation do you want?"</em> screen:
+          <ul>
+            <li>Choose <strong>"Upgrade"</strong> if your PC is working and you only want to update Windows while keeping your files and apps.</li>
+            <li>Choose <strong>"Custom: Install Windows only (advanced)"</strong> for a clean install on a corrupted PC. This erases everything.</li>
+          </ul>
+        </li>
+        <li>If you chose Custom: select the partition labelled <strong>Drive 0 Partition 1</strong> (or the largest partition), click <strong>Delete</strong>, then select the remaining unallocated space and click <strong>Next</strong>. The installer will set up the partitions automatically.</li>
+        <li>Windows will now copy files and install. Your PC will restart <strong>several times</strong> — this is normal. Do not turn it off. Leave the USB plugged in until setup is fully complete.</li>
+      </ol>
+      <img class="doc-img" src="../assets/images/windows-install-progress.png" alt="Windows installation progress screen" />
+
+      <h4>Step 6 — Complete the Windows Setup</h4>
+      <p>After installation, Windows will guide you through the initial setup (called OOBE — Out of Box Experience):</p>
+      <ol>
+        <li>Select your <strong>country or region</strong> and click <strong>Yes</strong>.</li>
+        <li>Select your <strong>keyboard layout</strong> and click <strong>Yes</strong>.</li>
+        <li>Connect to your <strong>Wi-Fi</strong> network and enter your password.</li>
+        <li>Sign in with your <strong>Microsoft account</strong> (email and password). If you don't have one, you can create one for free here or choose <em>"Sign-in options → Offline account"</em> for a local account instead.</li>
+        <li>Set a <strong>PIN</strong> for quick sign-in.</li>
+        <li>Choose your privacy settings — you can leave these at the defaults or turn off anything you prefer not to share, then click <strong>Accept</strong>.</li>
+        <li>Windows will finalise the setup and take you to the desktop. This can take a few minutes.</li>
+      </ol>
+
+      <h4>After Installation — What to Do Next</h4>
+      <p>Once you are on the desktop, do the following in order:</p>
+      <ol>
+        <li><strong>Run Windows Update</strong> — go to <strong>Settings → Windows Update → Check for updates</strong> and install everything. This may require another restart. Do this before anything else.</li>
+        <li><strong>Install drivers</strong> — Windows usually installs drivers automatically via Windows Update, but visit your PC manufacturer's website (Dell, HP, Lenovo, etc.) and download the latest drivers for your model if anything is not working (Wi-Fi, sound, display).</li>
+        <li><strong>Restore your files</strong> — copy your backed-up files back from your external drive or cloud storage.</li>
+        <li><strong>Reinstall your applications</strong> — download and reinstall the programs you use (browser, Office, etc.).</li>
+        <li><strong>Access your work PC remotely</strong> — once your home PC is set up, follow the <a href="parallels-ras.html">Remote Access guide</a> to reconnect to your office PC using Parallels RAS Client.</li>
+      </ol>
+      <blockquote>💡 <strong>Tip:</strong> If Windows does not activate automatically after connecting to the internet, go to <strong>Settings → System → Activation</strong> and click <strong>Troubleshoot</strong>. Most PCs activate within a few minutes of first connecting online.</blockquote>
+
+      <h4>Troubleshooting</h4>
+      <ul>
+        <li><strong>PC won't boot from USB</strong> — Try a different USB port (preferably a USB 2.0 port — the black ones, not the blue USB 3.0 ones). Also check your BIOS/UEFI settings: go into BIOS (usually <code>Del</code> or <code>F2</code> on startup) and make sure <strong>Secure Boot</strong> is enabled and <strong>Legacy Boot</strong> is disabled for Windows 11, or enable <strong>Legacy/CSM</strong> for older hardware.</li>
+        <li><strong>Setup says "This PC can't run Windows 11"</strong> — Your hardware may not meet the minimum requirements (e.g. no TPM 2.0). Use the Windows 10 installer instead, or contact IT for advice.</li>
+        <li><strong>Installation is stuck or errors out</strong> — Restart and try again. If the error persists, recreate the USB using the Media Creation Tool (the download may have been corrupted).</li>
+        <li><strong>Windows won't activate</strong> — Make sure you are connected to the internet. If activation still fails, go to <strong>Settings → System → Activation → Troubleshoot</strong>. If the error code starts with <code>0xC004</code>, contact IT — your licence may need to be relinked to your hardware.</li>
+        <li><strong>Missing drivers (no sound, no Wi-Fi)</strong> — Download the driver pack from your PC manufacturer's support website using the model number printed on the underside of your laptop or on the back of your desktop tower.</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="contact-bar">
+    Need help with Windows? Call IT on <strong>+91 8088461724</strong> or email <a href="mailto:ithelpdesk@houseofbluebeans.com">ithelpdesk@houseofbluebeans.com</a>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <img src="../assets/images/logo.png" alt="House of Blue Beans" height="22" />
+      <span>&copy; 2026 House of Blue Beans &mdash; IT Help Centre. Internal use only.</span>
+    </div>
+  </footer>
+
+  <script src="../assets/main.js?v=8"></script>
+</body>
+</html>
