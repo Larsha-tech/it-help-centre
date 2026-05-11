@@ -265,7 +265,7 @@ document.querySelectorAll('.filter-btn').forEach(function (btn) {
 
   /* Scroll to heading with offset for sticky header */
   function scrollToHeading(el) {
-    var top = el.getBoundingClientRect().top + window.scrollY - 80;
+    var top = el.getBoundingClientRect().top + window.scrollY - 126;
     window.scrollTo({ top: top, behavior: 'smooth' });
   }
 
