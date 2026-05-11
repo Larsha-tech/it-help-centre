@@ -616,3 +616,54 @@ body.light-mode .ccard-note { color: #94a3b8; }
 /* Footer */
 body.light-mode footer { background: #e2e8f0; border-top-color: #cbd5e1; }
 body.light-mode footer span { color: #64748b; }
+
+/* ══════════════════════════════════════
+   COMPACT LAYOUT — fits in one viewport
+══════════════════════════════════════ */
+
+/* Hero */
+.hero { padding: 2.25rem 2rem 1.75rem; }
+.eyebrow { margin-bottom: .75rem; }
+.hero h1 { font-size: 2rem; letter-spacing: -.03em; margin-bottom: .5rem; }
+.hero p { font-size: .9rem; margin-bottom: 1.25rem; }
+.search-box { padding: .7rem 1.1rem; border-radius: 12px; }
+.hero-actions { margin-top: 1rem; gap: .65rem; }
+.btn-primary, .btn-ghost { padding: .6rem 1.1rem; font-size: .82rem; border-radius: 10px; }
+
+/* Guides section */
+.guides { padding: 1.5rem 2rem 2rem; }
+.guides-label { margin-bottom: 1rem; }
+.onboard-banner { padding: .7rem 1.1rem; margin-bottom: 1rem; gap: .85rem; }
+.onboard-icon { font-size: 1.1rem; }
+.onboard-text strong { font-size: .8rem; }
+.onboard-text span { font-size: .72rem; }
+.onboard-step { padding: .3rem .65rem; font-size: .72rem; }
+.filter-row { margin-bottom: 1rem; gap: .4rem; }
+.filter-btn { padding: .3rem .8rem; font-size: .72rem; }
+.card-grid { gap: 1rem; }
+
+/* Guide cards — compact, matching library page */
+.gcard { padding: 1.1rem 1.2rem 1rem; border-radius: 18px; }
+.gc-top { margin-bottom: .7rem; gap: .65rem; }
+.gc-icon { width: 38px; height: 38px; border-radius: 11px; font-size: 1.1rem; }
+.gc-badge { font-size: .6rem; padding: .18rem .55rem; }
+.gc-title { font-size: .92rem; margin-bottom: .4rem; }
+.gc-desc { font-size: .78rem; margin-bottom: .75rem; line-height: 1.55; }
+.gc-footer { padding-top: .75rem; }
+.gc-cta { font-size: .78rem; }
+
+/* Contact section */
+.contact { padding: 1.5rem 2rem 2rem; }
+.contact-hd { margin-bottom: 1.25rem; }
+.contact-sub { font-size: .82rem; margin-top: .4rem; }
+.contact-row { gap: .85rem; }
+.ccard { padding: .85rem 1rem; border-radius: 14px; gap: .75rem; }
+.ccard-icon { width: 34px; height: 34px; font-size: .95rem; border-radius: 9px; }
+.ccard-label { font-size: .6rem; margin-bottom: .2rem; }
+.ccard-val { font-size: .8rem; }
+.ccard-note { font-size: .68rem; margin-top: .2rem; }
+
+/* Footer */
+footer { padding: .85rem 2rem; }
+.footer-inner { gap: .65rem; }
+footer span { font-size: .72rem; }
