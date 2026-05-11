@@ -60,17 +60,47 @@ if (searchInput) {
   });
 }
 
-/* ── Homepage: smooth scroll for anchor nav links ── */
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-  link.addEventListener('click', function (e) {
-    var id = this.getAttribute('href').slice(1);
-    var target = document.getElementById(id);
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+/* ── Homepage: smooth scroll + active nav tracking ── */
+(function () {
+  function setHomeNavActive(href) {
+    document.querySelectorAll('.nav-a, .nav-mobile-a').forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === href);
+    });
+  }
+
+  /* Update active on click */
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = this.getAttribute('href').slice(1);
+      var target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setHomeNavActive(this.getAttribute('href'));
+      }
+    });
   });
-});
+
+  /* Keep active in sync while scrolling */
+  var sections = ['guides', 'contact'].map(function (id) {
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  if (!sections.length) return;
+
+  var sectionObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) setHomeNavActive('#' + entry.target.id);
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(function (s) { sectionObserver.observe(s); });
+
+  /* Reset to Home when scrolled back to top */
+  window.addEventListener('scroll', function () {
+    if (window.scrollY < 100) setHomeNavActive('index.html');
+  }, { passive: true });
+})();
 
 /* ── Homepage: category filter ── */
 document.querySelectorAll('.filter-btn').forEach(function (btn) {
