@@ -486,7 +486,12 @@ footer span {
    GUIDE PAGES
 ══════════════════════════════════════ */
 .breadcrumb {
-  background: rgba(255,255,255,.03);
+  position: sticky;
+  top: 62px;
+  z-index: 100;
+  background: rgba(7,9,26,.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255,255,255,.07);
   padding: .7rem 2.5rem; font-size: .82rem;
   color: rgba(255,255,255,.35);

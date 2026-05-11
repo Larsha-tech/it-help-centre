@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="All IT guides for House of Blue Beans staff — ticketing, remote access, and more." />
+  <title>All Guides – House of Blue Beans IT Help Centre</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+  <link rel="stylesheet" href="../assets/style.css?v=7" />
+  <link rel="stylesheet" href="../assets/guides-lib.css?v=1" />
+</head>
+<body>
+
+  <header>
+    <div class="hdr-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.png" alt="House of Blue Beans" />
+        <div class="logo-sep"></div>
+        <span class="logo-label">IT Help Centre</span>
+      </a>
+      <nav>
+        <a href="../index.html" class="nav-a">Home</a>
+        <a href="../index.html#guides" class="nav-a">Guides</a>
+        <a href="../index.html#contact" class="nav-a">Contact IT</a>
+      </nav>
+      <div class="hdr-controls">
+        <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle light/dark mode">
+          <svg class="icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-mobile">
+      <a href="../index.html" class="nav-mobile-a">Home</a>
+      <a href="../index.html#guides" class="nav-mobile-a">Guides</a>
+      <a href="../index.html#contact" class="nav-mobile-a">Contact IT</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    All Guides
+  </div>
+
+  <div class="lib-wrap">
+    <div class="lib-inner">
+
+      <!-- Page header -->
+      <div class="lib-hd">
+        <span class="lib-label">Library</span>
+        <h1 class="lib-title">All Guides</h1>
+        <p class="lib-count" id="libCount">2 guides across 2 categories</p>
+      </div>
+
+      <!-- Search -->
+      <div class="lib-search-wrap">
+        <label class="lib-search" for="libSearch">
+          <svg class="lib-search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input id="libSearch" type="search" placeholder="Search guides…" autocomplete="off" />
+        </label>
+      </div>
+
+      <!-- Quickfilter -->
+      <span class="lib-filter-label">Quickfilter</span>
+      <div class="lib-pills">
+        <button class="lib-pill active" data-filter="all">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          All
+        </button>
+        <button class="lib-pill" data-filter="ticketing">🎫 Ticketing</button>
+        <button class="lib-pill" data-filter="remote-access">🖥️ Remote Access</button>
+      </div>
+
+      <!-- Empty state -->
+      <p class="lib-empty" id="libEmpty">No guides match your search.</p>
+
+      <!-- ── Ticketing ── -->
+      <div class="lib-section" data-category="ticketing">
+        <div class="lib-section-hd">
+          <h2 class="lib-section-title">
+            🎫 Ticketing
+            <span class="lib-section-count">1 guide</span>
+          </h2>
+        </div>
+        <p class="lib-section-desc">Guides for raising and managing IT support requests through GLPI.</p>
+        <div class="lib-grid">
+
+          <a class="lib-card" href="raise-it-ticket.html" data-title="raise an it support ticket" data-desc="log a request or report a problem through our glpi ticketing system">
+            <div class="lib-card-top">
+              <span class="lib-card-icon">🎫</span>
+              <span class="lib-card-badge lbd-blue">Ticketing</span>
+            </div>
+            <h3 class="lib-card-title">Raise an IT Support Ticket</h3>
+            <p class="lib-card-desc">Log a request or report a problem through our GLPI ticketing system. Our IT team will pick it up and get you back on track as fast as possible.</p>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- ── Remote Access ── -->
+      <div class="lib-section" data-category="remote-access">
+        <div class="lib-section-hd">
+          <h2 class="lib-section-title">
+            🖥️ Remote Access
+            <span class="lib-section-count">1 guide</span>
+          </h2>
+        </div>
+        <p class="lib-section-desc">Guides for connecting to office equipment securely from anywhere.</p>
+        <div class="lib-grid">
+
+          <a class="lib-card" href="parallels-ras.html" data-title="access your office pc remotely" data-desc="connect to your office desktop securely using parallels ras client from home">
+            <div class="lib-card-top">
+              <span class="lib-card-icon">🖥️</span>
+              <span class="lib-card-badge lbd-green">Remote Access</span>
+            </div>
+            <h3 class="lib-card-title">Access Your Office PC Remotely</h3>
+            <p class="lib-card-desc">Connect to your office desktop securely using Parallels RAS Client. Walk through every step from download and install to your first remote session.</p>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <img src="../assets/images/logo.png" alt="House of Blue Beans" height="22" />
+      <span>&copy; 2026 House of Blue Beans &mdash; IT Help Centre. Internal use only.</span>
+    </div>
+  </footer>
+
+  <script src="../assets/main.js?v=6"></script>
+  <script>
+    (function () {
+      var search   = document.getElementById('libSearch');
+      var pills    = document.querySelectorAll('.lib-pill');
+      var sections = document.querySelectorAll('.lib-section');
+      var cards    = document.querySelectorAll('.lib-card');
+      var empty    = document.getElementById('libEmpty');
+      var activeFilter = 'all';
+
+      function applyFilters() {
+        var q = search.value.trim().toLowerCase();
+        var anyVisible = false;
+
+        sections.forEach(function (sec) {
+          var cat = sec.dataset.category;
+          var catMatch = activeFilter === 'all' || activeFilter === cat;
+          var secHasMatch = false;
+
+          sec.querySelectorAll('.lib-card').forEach(function (card) {
+            var text = (card.dataset.title + ' ' + card.dataset.desc).toLowerCase();
+            var match = catMatch && (!q || text.includes(q));
+            card.style.display = match ? '' : 'none';
+            if (match) { secHasMatch = true; anyVisible = true; }
+          });
+
+          sec.classList.toggle('hidden', !secHasMatch);
+        });
+
+        empty.classList.toggle('visible', !anyVisible);
+      }
+
+      search.addEventListener('input', applyFilters);
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          activeFilter = pill.dataset.filter;
+          applyFilters();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
