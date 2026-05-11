@@ -1,3 +1,44 @@
+/* ── Theme: apply saved preference before first paint ── */
+(function () {
+  if (localStorage.getItem('theme') === 'light') document.body.classList.add('light-mode');
+})();
+
+/* ── Mobile nav toggle ── */
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var mobileNav = document.querySelector('.nav-mobile');
+  if (!toggle || !mobileNav) return;
+  toggle.addEventListener('click', function () {
+    var open = mobileNav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('header')) {
+      mobileNav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+
+/* ── Theme toggle button ── */
+(function () {
+  var btn = document.querySelector('.theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var isLight = document.body.classList.toggle('light-mode');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+})();
+
+/* ── Active nav link on guide pages ── */
+(function () {
+  if (!window.location.pathname.toLowerCase().includes('guides/')) return;
+  document.querySelectorAll('.nav-a, .nav-mobile-a').forEach(function (a) {
+    a.classList.remove('active');
+    if ((a.getAttribute('href') || '').includes('#guides')) a.classList.add('active');
+  });
+})();
+
 /* ── Homepage: search filter ── */
 var searchInput = document.getElementById('searchInput');
 if (searchInput) {
@@ -6,6 +47,16 @@ if (searchInput) {
     document.querySelectorAll('.gcard').forEach(function (card) {
       card.style.display = (!q || card.textContent.toLowerCase().includes(q)) ? '' : 'none';
     });
+    if (!q) window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* / shortcut to focus search */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
   });
 }
 
@@ -18,6 +69,18 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  });
+});
+
+/* ── Homepage: category filter ── */
+document.querySelectorAll('.filter-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var filter = btn.dataset.filter;
+    document.querySelectorAll('.gcard').forEach(function (card) {
+      card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+    });
   });
 });
 
@@ -37,7 +100,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     var scrolled = window.scrollY;
     var total = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
-  });
+  }, { passive: true });
 
   /* ── 2. Read time + last updated meta row ── */
   var wordCount = (docBody.innerText || docBody.textContent).trim().split(/\s+/).length;
@@ -157,14 +220,26 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     '</a>';
   docBody.appendChild(related);
 
+  /* ── 7. Back to top button ── */
+  var btt = document.createElement('button');
+  btt.className = 'back-to-top';
+  btt.title = 'Back to top';
+  btt.innerHTML = '<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>';
+  document.body.appendChild(btt);
+  window.addEventListener('scroll', function () {
+    btt.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  btt.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   /* Scroll to heading with offset for sticky header */
   function scrollToHeading(el) {
-    var offset = 80; /* 62px header + 18px breathing room */
-    var top = el.getBoundingClientRect().top + window.scrollY - offset;
+    var top = el.getBoundingClientRect().top + window.scrollY - 80;
     window.scrollTo({ top: top, behavior: 'smooth' });
   }
 
-  /* ── 7. TOC — assign IDs to headings ── */
+  /* ── 8. TOC — assign IDs to headings ── */
   var headings = Array.from(docBody.querySelectorAll('h4'));
   if (headings.length < 2) return;
 

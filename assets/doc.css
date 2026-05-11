@@ -418,3 +418,23 @@ body { background: #fff; }
 }
 .related-card-text span { font-size: .8rem; color: #64748b; text-decoration: none; }
 .related-card-arrow { margin-left: auto; color: #93c5fd; flex-shrink: 0; }
+
+/* ── Back to top ── */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 42px; height: 42px;
+  background: #0f172a;
+  color: #fff;
+  border: none; border-radius: 50%;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  opacity: 0; pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .2s, transform .2s, background .15s;
+  z-index: 500;
+}
+.back-to-top.visible { opacity: 1; pointer-events: all; transform: translateY(0); }
+.back-to-top:hover { background: #1d4ed8; }
