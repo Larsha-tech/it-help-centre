@@ -54,7 +54,7 @@
       <h1>HOBB Network Drive Switcher</h1>
 
       <h4>What Is This App?</h4>
-      <p>The HOBB Network Drive Switcher is a small tool that connects your computer to the correct network drive with a single click. It automatically handles disconnecting any existing drive before connecting the one you need — no manual steps required.</p>
+      <p>The HOBB Network Drive Switcher is a secure tool that connects your computer to the correct network drive with a single click. Each team has their own password — you will only see the drive button that belongs to your team.</p>
 
       <h4>Available Drives</h4>
       <table>
@@ -66,12 +66,12 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>M: Drive — Motif</strong></td>
-            <td>Connects the Motif network folder as your M: drive. Any existing B: drive will be disconnected first.</td>
+            <td><strong>M: Drive — Motif (Team Motif)</strong></td>
+            <td>Connects the Motif network folder as your M: drive. Only available to Team Motif after entering the Motif password.</td>
           </tr>
           <tr>
-            <td><strong>B: Drive — Benz</strong></td>
-            <td>Connects the Benz (shares) network folder as your B: drive. Any existing M: drive will be disconnected first.</td>
+            <td><strong>B: Drive — Benz (Team Benz)</strong></td>
+            <td>Connects the Benz (shares) network folder as your B: drive. Only available to Team Benz after entering the Benz password.</td>
           </tr>
         </tbody>
       </table>
@@ -79,20 +79,22 @@
       <h4>How to Use</h4>
       <ol>
         <li><strong>Open the app</strong> — Double-click <code>DriveSwitch.exe</code> located at <code>N:\Sys\Automation\DriveSwitch</code>.</li>
-        <li><strong>Choose your drive</strong> — Click the blue <strong>M: Drive (Motif)</strong> button or the green <strong>B: Drive (Benz)</strong> button — whichever you need.</li>
-        <li><strong>Wait for confirmation</strong> — The status bar at the bottom will turn green and show <em>"Success! Drive is connected."</em></li>
-        <li><strong>Close the app</strong> — Click the X button to close. Your drive will remain connected.</li>
+        <li><strong>Allow admin access</strong> — A Windows security prompt will appear asking <em>"Do you want to allow this app to make changes?"</em> — click <strong>Yes</strong> to continue. This is required to connect network drives.</li>
+        <li><strong>Enter your password</strong> — A password screen will appear. Type your team password and click <strong>Login</strong> (or press <strong>Enter</strong>). You will only see the drive button for your team.</li>
+        <li><strong>Connect your drive</strong> — Click your drive button. The status bar at the bottom will turn green and show <em>"Success! Drive is connected."</em></li>
+        <li><strong>Close the app</strong> — Click the X button to close. Your drive will stay connected.</li>
       </ol>
       <blockquote>The app window will always stay on top of other windows until you close it. This is by design so you can always see the connection status.</blockquote>
 
       <h4>Disconnecting Drives</h4>
-      <p>If you need to disconnect all network drives, click the red <strong>Disconnect All Drives</strong> button. Both M: and B: drives will be removed from your computer.</p>
-      <p>Drives are also automatically disconnected whenever you switch — so if you click M: Drive while B: is connected, B: is removed and M: is connected in one step.</p>
+      <p>Click the red <strong>Disconnect All Drives</strong> button to remove all mapped network drives from your computer. Drives are also automatically disconnected whenever you switch, so no manual cleanup is needed.</p>
 
       <h4>Troubleshooting</h4>
       <ul>
-        <li><strong>Status bar shows red error</strong> — Check that you are connected to the office network or VPN. Contact IT if the problem persists.</li>
-        <li><strong>App does not open</strong> — Make sure you can reach the shared network folder at <code>N:\Sys\Automation\DriveSwitch</code>. Contact IT Support for help.</li>
+        <li><strong>Windows UAC prompt appears</strong> — This is expected — click <strong>Yes</strong>. The app needs administrator rights to connect network drives on Windows 10 and Windows 11.</li>
+        <li><strong>Wrong password message</strong> — Make sure you are using your team's password. Contact IT if you have forgotten it.</li>
+        <li><strong>Status bar shows red error</strong> — Check that you are connected to the office network. Contact IT Support if the problem persists.</li>
+        <li><strong>App does not open</strong> — Make sure you can reach the N: drive at <code>N:\Sys\Automation\DriveSwitch</code>. Contact IT Support for help.</li>
         <li><strong>Drive connected but not visible in File Explorer</strong> — Open File Explorer and press <code>F5</code> to refresh. The drive should appear under <em>"This PC"</em>.</li>
       </ul>
 
