@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout *)",
+      "Bash(git push *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Administrator\\\\it-help-centre\" -Recurse -Force)",
+      "Bash(Test-Path \"c:\\\\Users\\\\Administrator\\\\it-help-centre\\\\assets\\\\images\\\\logo.png\" -PathType Leaf)",
+      "Bash(Test-Path \"c:\\\\Users\\\\Administrator\\\\it-help-centre\\\\assets\\\\images\\\\glpi-login.png\" -PathType Leaf)",
+      "Bash(Test-Path \"c:\\\\Users\\\\Administrator\\\\it-help-centre\\\\assets\\\\images\\\\glpi-home.png\" -PathType Leaf)",
+      "Bash(Test-Path \"c:\\\\Users\\\\Administrator\\\\it-help-centre\\\\assets\\\\images\\\\glpi-create-ticket.png\" -PathType Leaf)",
+      "Bash(Test-Path \"c:\\\\Users\\\\Administrator\\\\it-help-centre\\\\assets\\\\images\\\\logo-full.png\" -PathType Leaf)"
+    ]
+  }
+}
