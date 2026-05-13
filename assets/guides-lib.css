@@ -139,7 +139,7 @@
   display: flex; align-items: flex-start; justify-content: space-between;
   margin-bottom: 1rem;
 }
-.lib-card-icon { font-size: 1.6rem; line-height: 1; }
+.lib-card-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .lib-card-badge {
   font-size: .6rem; font-weight: 700;
   letter-spacing: .06em; text-transform: uppercase;
