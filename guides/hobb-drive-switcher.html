@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How to use the HOBB Network Drive Switcher to connect your computer to the M: or B: network drive with a single click." />
+  <title>HOBB Network Drive Switcher – House of Blue Beans IT Help Centre</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+  <link rel="stylesheet" href="../assets/style.css?v=8" />
+  <link rel="stylesheet" href="../assets/doc.css?v=12" />
+</head>
+<body>
+
+  <header>
+    <div class="hdr-inner">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.png" alt="House of Blue Beans" />
+        <div class="logo-sep"></div>
+        <span class="logo-label">IT Help Centre</span>
+      </a>
+      <nav>
+        <a href="../index.html" class="nav-a">Home</a>
+        <a href="../index.html#guides" class="nav-a">Guides</a>
+        <a href="../index.html#contact" class="nav-a">Contact IT</a>
+      </nav>
+      <div class="hdr-controls">
+        <button class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle light/dark mode">
+          <svg class="icon-moon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-mobile">
+      <a href="../index.html" class="nav-mobile-a">Home</a>
+      <a href="../index.html#guides" class="nav-mobile-a">Guides</a>
+      <a href="../index.html#contact" class="nav-mobile-a">Contact IT</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <a href="../index.html#guides">Guides</a>
+    <span>›</span>
+    HOBB Network Drive Switcher
+  </div>
+
+  <div class="doc-wrap">
+    <div class="doc-body" data-updated="May 2026">
+
+      <h1>HOBB Network Drive Switcher</h1>
+
+      <h4>What Is This App?</h4>
+      <p>The HOBB Network Drive Switcher is a small tool that connects your computer to the correct network drive with a single click. It automatically handles disconnecting any existing drive before connecting the one you need — no manual steps required.</p>
+
+      <h4>Available Drives</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Button</th>
+            <th>What it connects</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>M: Drive — Motif</strong></td>
+            <td>Connects the Motif network folder as your M: drive. Any existing B: drive will be disconnected first.</td>
+          </tr>
+          <tr>
+            <td><strong>B: Drive — Benz</strong></td>
+            <td>Connects the Benz (shares) network folder as your B: drive. Any existing M: drive will be disconnected first.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4>How to Use</h4>
+      <ol>
+        <li><strong>Open the app</strong> — Double-click <code>DriveSwitch.exe</code> located at <code>N:\SysAutomation\DriveSwitch</code>.</li>
+        <li><strong>Choose your drive</strong> — Click the blue <strong>M: Drive (Motif)</strong> button or the green <strong>B: Drive (Benz)</strong> button — whichever you need.</li>
+        <li><strong>Wait for confirmation</strong> — The status bar at the bottom will turn green and show <em>"Success! Drive is connected."</em></li>
+        <li><strong>Close the app</strong> — Click the X button to close. Your drive will remain connected.</li>
+      </ol>
+      <blockquote>The app window will always stay on top of other windows until you close it. This is by design so you can always see the connection status.</blockquote>
+
+      <h4>Disconnecting Drives</h4>
+      <p>If you need to disconnect all network drives, click the red <strong>Disconnect All Drives</strong> button. Both M: and B: drives will be removed from your computer.</p>
+      <p>Drives are also automatically disconnected whenever you switch — so if you click M: Drive while B: is connected, B: is removed and M: is connected in one step.</p>
+
+      <h4>Troubleshooting</h4>
+      <ul>
+        <li><strong>Status bar shows red error</strong> — Check that you are connected to the office network or VPN. Contact IT if the problem persists.</li>
+        <li><strong>App does not open</strong> — Make sure you can reach the shared network folder at <code>N:\SysAutomation\DriveSwitch</code>. Contact IT Support for help.</li>
+        <li><strong>Drive connected but not visible in File Explorer</strong> — Open File Explorer and press <code>F5</code> to refresh. The drive should appear under <em>"This PC"</em>.</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="contact-bar">
+    Need help? Call IT on <strong>+91 8088461724</strong> or email <a href="mailto:ithelpdesk@houseofbluebeans.com">ithelpdesk@houseofbluebeans.com</a>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <img src="../assets/images/logo.png" alt="House of Blue Beans" height="22" />
+      <span>&copy; 2026 House of Blue Beans &mdash; IT Help Centre. Internal use only.</span>
+    </div>
+  </footer>
+
+  <script src="../assets/main.js?v=8"></script>
+</body>
+</html>

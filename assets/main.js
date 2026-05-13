@@ -238,8 +238,9 @@ document.querySelectorAll('.filter-btn').forEach(function (btn) {
   var _path = window.location.pathname.toLowerCase();
   var _relMap = {
     parallels:       { href: 'raise-it-ticket.html',  icon: '🎫', title: 'How to Raise an IT Support Ticket',    desc: 'Log a request or report a problem through GLPI.' },
-    'install-windows':{ href: 'raise-it-ticket.html', icon: '🎫', title: 'How to Raise an IT Support Ticket',    desc: 'Need IT help after installing Windows? Log a ticket.' },
-    default:         { href: 'parallels-ras.html',    icon: '🖥️', title: 'How to Access Your Office PC Remotely', desc: 'Connect to your office desktop securely from home.' }
+    'install-windows':   { href: 'raise-it-ticket.html',      icon: '🎫', title: 'How to Raise an IT Support Ticket',    desc: 'Need IT help after installing Windows? Log a ticket.' },
+    'hobb-drive-switcher':{ href: 'raise-it-ticket.html',     icon: '🎫', title: 'How to Raise an IT Support Ticket',    desc: 'Having trouble with a network drive? Log a ticket with IT.' },
+    default:             { href: 'parallels-ras.html',        icon: '🖥️', title: 'How to Access Your Office PC Remotely', desc: 'Connect to your office desktop securely from home.' }
   };
   var _relKey = Object.keys(_relMap).find(function(k) { return k !== 'default' && _path.includes(k); }) || 'default';
   var _rel = _relMap[_relKey];
